@@ -15,7 +15,7 @@ jobs:
   # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -27,12 +27,14 @@ jobs:
       with:
         version: latest
         repository: HozeSio/when_they_cry_tool
-        file: converter.exe
+        file: converter
     
     - name: Replace text using translation xlsx files
-      shell: bash
       run: |
-        ./converter.exe replace_text Update translation/xlsx translation/actor.xlsx
+        ls -l
+        sudo chmod a+x ./converter
+        ls -l
+        ./converter replace_text Update translation/xlsx translation/actor.xlsx
         zip -r Update.zip Update_replaced/
         
     - uses: ncipollo/release-action@v1
