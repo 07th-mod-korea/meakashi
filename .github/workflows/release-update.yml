@@ -32,9 +32,8 @@ jobs:
     - name: Replace text using translation xlsx files
       run: |
         ls -l
-        chmod +x ./converter
+        sudo chmod a+x ./converter
         ls -l
-        ./converter/converter
         ./converter replace_text Update translation/xlsx translation/actor.xlsx
         zip -r Update.zip Update_replaced/
         
