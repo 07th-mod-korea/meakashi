@@ -31,7 +31,7 @@ jobs:
     
     - name: Replace text using translation xlsx files
       run: |
-        converter replace_text Update translation/xlsx translation/actor.xlsx
+        ./converter replace_text Update translation/xlsx translation/actor.xlsx
         zip -r Update.zip Update_replaced/
         
     - uses: ncipollo/release-action@v1
