@@ -6,9 +6,10 @@ name: Make translated txt files
 # events but only for the master branch
 on:
   push:
-    #paths:
-    #- 'Update/**'
-    #- 'translation/**'
+    paths:
+    - 'Update/**'
+    - 'translation/**'
+    - 'tips.json'
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -38,7 +39,7 @@ jobs:
     - uses: ncipollo/release-action@v1
       with:
         allowUpdates: true
-        artifacts: "Update.zip"
+        artifacts: "Update.zip,tips.json"
         name: Release korean update file
         tag: latest
         token: ${{ secrets.GITHUB_TOKEN }}
