@@ -2548,8 +2548,8 @@ void main()
 	char Item[2];
 
 	if (GetGlobalFlag(GLanguage) == 1) {
-		Item[0] = "At that time, I became aware of Keiichi's gaze";
-		Item[1] = "And then, I turned around to face Keiichi";
+		Item[0] = "그때 나는 케이이치의 시선을 알아차렸다.";
+		Item[1] = "그리고 나는 케이이치에게 시선을 돌렸다.";
 	} else {
 		Item[0] = "その時、私は圭一の視線に気がついた";
 		Item[1] = "そして私は、圭一に振り返った ";
